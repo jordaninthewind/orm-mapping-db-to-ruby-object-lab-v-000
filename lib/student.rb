@@ -17,9 +17,9 @@ class Student
       SELECT * FROM Students
     SQL
 
-    DB[:conn].execute(sql).map do |el|
-      binding.pry
-      self.id = el
+    # DB[:conn].execute(sql).map do |el|
+      # binding.pry
+      # self.id = el
     end
   end
 
