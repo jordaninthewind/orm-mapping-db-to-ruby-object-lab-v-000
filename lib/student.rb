@@ -9,12 +9,9 @@ class Student
       student.grade = row[2]
       student.id = row[0]
     end
-    # create a new Student object given a row from the database
   end
 
   def self.all
-    # retrieve all the rows from the "Students" database
-    # remember each row should be a new instance of the Student class
     sql = <<-SQL
       SELECT * FROM Students
     SQL
