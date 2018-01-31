@@ -18,10 +18,11 @@ class Student
       SELECT * FROM Students
     SQL
 
-    # DB[:conn].execute(sql).map do |el|
+    DB[:conn].execute(sql).map do |el|
+      self.new_from_db(el)
     #   binding.pry
     #   self.id = el
-    # end
+    end
   end
 
   def self.find_by_name(name)
