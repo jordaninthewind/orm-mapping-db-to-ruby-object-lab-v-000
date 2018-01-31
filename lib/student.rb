@@ -5,7 +5,7 @@ class Student
 
   def self.new_from_db(row)
     # binding.pry
-    student = Student.new
+    Student.new.tap do |student|
     student.name = row[1]
     student.grade = row[2]
     student.id = row[0]
