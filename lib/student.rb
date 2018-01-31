@@ -18,8 +18,6 @@ class Student
 
     DB[:conn].execute(sql).map do |el|
       self.new_from_db(el)
-    #   binding.pry
-    #   self.id = el
     end
   end
 
