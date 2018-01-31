@@ -4,9 +4,8 @@ class Student
   attr_accessor :id, :name, :grade
 
   def self.new_from_db(row)
-    # binding.pry
     Student.new.tap do |student|
-      binding.pry
+      # binding.pry
       student.name = row[1]
       student.grade = row[2]
       student.id = row[0]
