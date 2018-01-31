@@ -18,9 +18,9 @@ class Student
     SQL
 
     # DB[:conn].execute(sql).map do |el|
-      # binding.pry
-      # self.id = el
-    end
+    #   binding.pry
+    #   self.id = el
+    # end
   end
 
   def self.find_by_name(name)
