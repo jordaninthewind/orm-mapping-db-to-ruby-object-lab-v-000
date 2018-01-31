@@ -34,7 +34,7 @@ class Student
       WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql, name)
+    DB[:conn].execute(sql, name).flatten
     binding.pry
     self.new_from_db(x)
   end
