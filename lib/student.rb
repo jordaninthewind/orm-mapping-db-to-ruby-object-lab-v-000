@@ -74,6 +74,6 @@ class Student
 
   def self.first_student_in_grade_10
     x = DB[:conn].execute("SELECT * FROM students WHERE grade = 10 ORDER BY id ASC LIMIT 1").flatten
-    self.new_from_db(self)
+    self.new_from_db(x)
   end
 end
