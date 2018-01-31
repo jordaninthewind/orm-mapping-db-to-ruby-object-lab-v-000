@@ -29,10 +29,11 @@ class Student
 
   def self.find_by_name(name)
     sql = <<-SQL
-      SELECT * FROM students WHERE name = ?
+      SELECT * FROM students
+      WHERE name = ?
     SQL
 
-    x = DB[:conn].execute(sql, name)
+    DB[:conn].execute(sql, name)
     binding.pry
     self.new_from_db(x)
   end
